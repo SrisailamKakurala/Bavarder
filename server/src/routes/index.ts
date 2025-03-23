@@ -1,4 +1,5 @@
 import { Router } from "express"
+import AuthController from "../controllers/auth.controller.js";
 
 //  Express (`express()`)
 // - Acts as the main server that listens for incoming requests.
@@ -13,3 +14,8 @@ import { Router } from "express"
 // - Essential for large applications where organization is key.
 
 const router = Router()
+
+// Auth Routes
+router.post('/auth/login', AuthController.login);
+
+export default router;

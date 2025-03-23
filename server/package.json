@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "watch": "tsc -w",
-    "server": "nodemon dist/index.js",
+    "server": "npx prisma generate && nodemon dist/index.js",
     "dev": "concurrently \"npm run watch\" \"npm run server\""
   },
   "keywords": [],
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@prisma/client": "^6.5.0",
+    "axios": "^1.8.4",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",

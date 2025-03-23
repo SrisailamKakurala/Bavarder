@@ -3,9 +3,9 @@ import React from "react";
 import Link from "next/link";
 // import { CustomUser } from "@/app/api/auth/[...nextauth]/options";
 import { Button } from "@/components/ui/button";
-import LoginModal from "../auth/LoginModal";
-import { CustomUser } from "@/app/api/api/[...nextauth]/options";
-// import LoginModal from "@/components/auth/LoginModal";
+import { CustomUser } from "@/app/api/auth/[...nextauth]/options";
+import LoginModal from "@/components/auth/LoginModal";
+
 export default function Navbar({user}:{user?:CustomUser}) {
   return (
     <nav className="p-6 flex justify-between items-center bg-white shadow-sm">

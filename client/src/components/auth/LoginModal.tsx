@@ -8,12 +8,18 @@ import {
   } from "@/components/ui/dialog"
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { signIn } from "next-auth/react";
   
 
 const LoginModal = () => {
+
+    const handleLogin = () => {
+        signIn("google", { callbackUrl: "/dashboard", redirect: true });
+    }
+
     return (
         <Dialog>
-            <DialogTrigger asChild>
+            <DialogTrigger className="bg-gray-700 py-2 px-3 rounded-lg text-white">
                 Getting Start
             </DialogTrigger>
             <DialogContent>
@@ -24,7 +30,7 @@ const LoginModal = () => {
                     secure chat links and start conversations in seconds.
                 </DialogDescription>
                 </DialogHeader>
-                <Button variant={"outline"}>
+                <Button variant={"outline"} onClick={handleLogin}>
                     <Image 
                         src={"/images/google.png"}
                         alt={"Google Logo"}

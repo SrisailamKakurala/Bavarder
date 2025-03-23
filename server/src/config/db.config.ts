@@ -1,8 +1,7 @@
-import { PrismaClient } from "@prisma/client/extension";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient({
     log: ['query', 'error'],
-    // debug: true,
 });
 
 
